@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "packs": [
+    {
+      "id": "toolcall-15",
+      "name": "ToolCall-15",
+      "author": "stevibe",
+      "description": "Tool-use benchmark with 15 fixed scenarios and tool-call loop scoring.",
+      "version": "1.0.0",
+      "source": {
+        "type": "github",
+        "repo": "stevibe/ToolCall-15",
+        "tag": "main"
+      },
+      "homepage": "https://github.com/stevibe/ToolCall-15",
+      "license": "MIT",
+      "scenarioCount": 15,
+      "capabilities": {
+        "tools": true,
+        "multiTurn": false,
+        "verification": false
+      }
+    },
+    {
+      "id": "bugfind-15",
+      "name": "BugFind-15",
+      "author": "stevibe",
+      "description": "Execution-backed debugging benchmark with verifier-backed scoring across 15 fixed scenarios.",
+      "version": "1.0.0",
+      "source": {
+        "type": "github",
+        "repo": "stevibe/BugFind-15",
+        "tag": "main"
+      },
+      "homepage": "https://github.com/stevibe/BugFind-15",
+      "license": "MIT",
+      "scenarioCount": 15,
+      "capabilities": {
+        "tools": false,
+        "multiTurn": true,
+        "verification": true
+      }
+    },
+    {
+      "id": "dataextract-15",
+      "name": "DataExtract-15",
+      "author": "stevibe",
+      "description": "Deterministic LLM data extraction benchmark with 15 fixed scenarios.",
+      "version": "1.0.0",
+      "source": {
+        "type": "github",
+        "repo": "stevibe/DataExtract-15",
+        "tag": "main"
+      },
+      "homepage": "https://github.com/stevibe/DataExtract-15",
+      "license": "MIT",
+      "scenarioCount": 15,
+      "capabilities": {
+        "tools": false,
+        "multiTurn": false,
+        "verification": false
+      }
+    },
+    {
+      "id": "instructfollow-15",
+      "name": "InstructFollow-15",
+      "author": "stevibe",
+      "description": "Constraint-heavy instruction-following benchmark with 15 fixed scenarios.",
+      "version": "1.0.0",
+      "source": {
+        "type": "github",
+        "repo": "stevibe/InstructFollow-15",
+        "tag": "main"
+      },
+      "homepage": "https://github.com/stevibe/InstructFollow-15",
+      "license": "MIT",
+      "scenarioCount": 15,
+      "capabilities": {
+        "tools": false,
+        "multiTurn": false,
+        "verification": false
+      }
+    },
+    {
+      "id": "reasonmath-15",
+      "name": "ReasonMath-15",
+      "author": "stevibe",
+      "description": "Practical reasoning and math benchmark with 15 fixed scenarios.",
+      "version": "1.0.0",
+      "source": {
+        "type": "github",
+        "repo": "stevibe/ReasonMath-15",
+        "tag": "main"
+      },
+      "homepage": "https://github.com/stevibe/ReasonMath-15",
+      "license": "MIT",
+      "scenarioCount": 15,
+      "capabilities": {
+        "tools": false,
+        "multiTurn": false,
+        "verification": false
+      }
+    },
+    {
+      "id": "structoutput-15",
+      "name": "StructOutput-15",
+      "author": "stevibe",
+      "description": "Structured output benchmark with validator-backed scoring across 15 fixed scenarios.",
+      "version": "1.0.0",
+      "source": {
+        "type": "github",
+        "repo": "stevibe/StructOutput-15",
+        "tag": "main"
+      },
+      "homepage": "https://github.com/stevibe/StructOutput-15",
+      "license": "MIT",
+      "scenarioCount": 15,
+      "capabilities": {
+        "tools": false,
+        "multiTurn": false,
+        "verification": true
+      }
+    }
+  ]
+}
