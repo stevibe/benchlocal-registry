@@ -10,7 +10,7 @@
       "source": {
         "type": "github",
         "repo": "stevibe/ToolCall-15",
-        "tag": "main"
+        "tag": "v1.0.0"
       },
       "homepage": "https://github.com/stevibe/ToolCall-15",
       "license": "MIT",
@@ -30,7 +30,7 @@
       "source": {
         "type": "github",
         "repo": "stevibe/BugFind-15",
-        "tag": "main"
+        "tag": "v1.0.0"
       },
       "homepage": "https://github.com/stevibe/BugFind-15",
       "license": "MIT",
@@ -50,7 +50,7 @@
       "source": {
         "type": "github",
         "repo": "stevibe/DataExtract-15",
-        "tag": "main"
+        "tag": "v1.0.0"
       },
       "homepage": "https://github.com/stevibe/DataExtract-15",
       "license": "MIT",
@@ -70,7 +70,7 @@
       "source": {
         "type": "github",
         "repo": "stevibe/InstructFollow-15",
-        "tag": "main"
+        "tag": "v1.0.0"
       },
       "homepage": "https://github.com/stevibe/InstructFollow-15",
       "license": "MIT",
@@ -90,7 +90,7 @@
       "source": {
         "type": "github",
         "repo": "stevibe/ReasonMath-15",
-        "tag": "main"
+        "tag": "v1.0.0"
       },
       "homepage": "https://github.com/stevibe/ReasonMath-15",
       "license": "MIT",
@@ -110,7 +110,7 @@
       "source": {
         "type": "github",
         "repo": "stevibe/StructOutput-15",
-        "tag": "main"
+        "tag": "v1.0.0"
       },
       "homepage": "https://github.com/stevibe/StructOutput-15",
       "license": "MIT",

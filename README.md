@@ -13,9 +13,7 @@ This repository is the single source of truth for official Bench Packs that Benc
 
 ## Official Source Strategy
 
-The public registry in `registry.json` points to the maintained GitHub `main` branches for the six official Bench Packs.
-
-Once release tags exist, update each entry from `main` to a stable release tag such as `v1.0.0`.
+The public registry in `registry.json` points to stable GitHub release tags for the six official Bench Packs.
 
 The registry metadata should stay aligned with each pack's `benchlocal.pack.json`, especially:
 
