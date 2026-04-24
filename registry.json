@@ -6,11 +6,11 @@
       "name": "ToolCall-15",
       "author": "stevibe",
       "description": "Tool-use benchmark with 15 fixed scenarios and tool-call loop scoring.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "source": {
         "type": "github",
         "repo": "stevibe/ToolCall-15",
-        "tag": "v1.0.0"
+        "tag": "v1.0.1"
       },
       "homepage": "https://github.com/stevibe/ToolCall-15",
       "license": "MIT",
