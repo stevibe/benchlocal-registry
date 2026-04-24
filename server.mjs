@@ -16,7 +16,8 @@ const LOCAL_PACK_PATHS = {
   "instructfollow-15": path.resolve(__dirname, "../InstructFollow-15"),
   "reasonmath-15": path.resolve(__dirname, "../ReasonMath-15"),
   "structoutput-15": path.resolve(__dirname, "../StructOutput-15"),
-  "hermesagent-20": path.resolve(__dirname, "../HermesAgent-20")
+  "hermesagent-20": path.resolve(__dirname, "../HermesAgent-20"),
+  "cli-40": path.resolve(__dirname, "../CLI-40")
 };
 
 function sendJson(response, statusCode, payload) {

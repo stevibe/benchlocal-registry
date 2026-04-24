@@ -140,6 +140,26 @@
         "multiTurn": true,
         "verification": true
       }
+    },
+    {
+      "id": "cli-40",
+      "name": "CLI-40",
+      "author": "stevibe",
+      "description": "Executable Linux CLI benchmark with deterministic verifier-backed evaluation across 40 one-shot and multi-round scenarios.",
+      "version": "1.0.0",
+      "source": {
+        "type": "github",
+        "repo": "stevibe/CLI-40",
+        "tag": "v1.0.0"
+      },
+      "homepage": "https://github.com/stevibe/CLI-40",
+      "license": "MIT",
+      "scenarioCount": 40,
+      "capabilities": {
+        "tools": true,
+        "multiTurn": true,
+        "verification": true
+      }
     }
   ]
 }
