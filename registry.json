@@ -26,11 +26,11 @@
       "name": "BugFind-15",
       "author": "stevibe",
       "description": "Execution-backed debugging benchmark with verifier-backed scoring across 15 fixed scenarios.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "source": {
         "type": "github",
         "repo": "stevibe/BugFind-15",
-        "tag": "v1.0.0"
+        "tag": "v1.0.1"
       },
       "homepage": "https://github.com/stevibe/BugFind-15",
       "license": "MIT",
