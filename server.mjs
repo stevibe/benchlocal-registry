@@ -17,7 +17,8 @@ const LOCAL_PACK_PATHS = {
   "reasonmath-15": path.resolve(__dirname, "../ReasonMath-15"),
   "structoutput-15": path.resolve(__dirname, "../StructOutput-15"),
   "hermesagent-20": path.resolve(__dirname, "../HermesAgent-20"),
-  "cli-40": path.resolve(__dirname, "../CLI-40")
+  "cli-40": path.resolve(__dirname, "../CLI-40"),
+  "formsight": path.resolve(__dirname, "../formsight")
 };
 
 function sendJson(response, statusCode, payload) {
@@ -84,6 +85,18 @@ function validateRegistryEntry(entry) {
   if (!entry?.source?.type) {
     throw new Error(`Registry entry "${entry.id}" is missing source metadata.`);
   }
+
+  if (entry.source.type === "github" && (!entry.source.repo || !entry.source.tag)) {
+    throw new Error(`Registry entry "${entry.id}" is missing GitHub source metadata.`);
+  }
+
+  if (entry.source.type === "archive" && !entry.source.url) {
+    throw new Error(`Registry entry "${entry.id}" is missing archive source metadata.`);
+  }
+
+  if (entry.source.type === "web" && !entry.source.entry) {
+    throw new Error(`Registry entry "${entry.id}" is missing web source metadata.`);
+  }
 }
 
 function validateRegistryAgainstManifest(entry, manifest) {
@@ -103,6 +116,11 @@ function validateRegistryAgainstManifest(entry, manifest) {
   check("capabilities.tools", entry.capabilities?.tools, manifest.capabilities?.tools);
   check("capabilities.multiTurn", entry.capabilities?.multiTurn, manifest.capabilities?.multiTurn);
   check("capabilities.verification", entry.capabilities?.verification, manifest.capabilities?.verification);
+
+  if (entry.source?.type === "web") {
+    check("source.entry", entry.source.entry, manifest.entry);
+    check("source.buildId", entry.source.buildId, manifest.web?.buildId);
+  }
 
   if (mismatches.length > 0) {
     throw new Error(`Registry entry "${entry.id}" is out of sync with benchlocal.pack.json:\n- ${mismatches.join("\n- ")}`);
@@ -179,10 +197,13 @@ async function serveRegistry(request, response) {
     schemaVersion: 1,
     packs: registry.packs.map((entry) => ({
       ...entry,
-      source: {
-        type: "archive",
-        url: `${baseUrl}/packs/${entry.id}.tar.gz`
-      }
+      source:
+        entry.source.type === "web"
+          ? entry.source
+          : {
+              type: "archive",
+              url: `${baseUrl}/packs/${entry.id}.tar.gz`
+            }
     }))
   });
 }
@@ -197,6 +218,11 @@ async function servePackArchive(packId, response) {
   }
 
   const packRoot = LOCAL_PACK_PATHS[packId];
+
+  if (pack.source.type === "web") {
+    sendJson(response, 400, { error: `Bench Pack "${packId}" is web-hosted and does not have an archive artifact.` });
+    return;
+  }
 
   try {
     const stats = await fs.stat(packRoot);

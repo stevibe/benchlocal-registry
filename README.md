@@ -15,6 +15,9 @@ This repository is the single source of truth for official Bench Packs that Benc
 
 The public registry in `registry.json` points to stable GitHub release tags for the official Bench Packs.
 
+Web Bench Packs point to a hosted `entry` URL and a hosted `benchlocal.pack.json` manifest. BenchLocal validates
+the hosted manifest during install, including any `requirements.benchlocal.minVersion` gate declared by the pack.
+
 The registry metadata should stay aligned with each pack's `benchlocal.pack.json`, especially:
 
 - `id`
@@ -22,6 +25,8 @@ The registry metadata should stay aligned with each pack's `benchlocal.pack.json
 - `author`
 - `description`
 - `version`
+- web `source.entry`
+- web `source.buildId`
 - `capabilities.tools`
 - `capabilities.multiTurn`
 - `capabilities.verification`
@@ -44,6 +49,7 @@ The local server:
 - rebuilds local Bench Packs through `npm run build:benchlocal`
 - serves a local archive-backed registry at `http://127.0.0.1:4545/registry.json`
 - serves Bench Pack archives from the sibling repositories under `../`
+- keeps web Bench Pack entries pointed at their hosted URLs instead of rewriting them to archives
 
 That lets BenchLocal install packs without publishing them first.
 

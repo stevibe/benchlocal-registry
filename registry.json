@@ -142,6 +142,27 @@
       }
     },
     {
+      "id": "formsight",
+      "name": "FormSight",
+      "author": "BenchLocal",
+      "description": "Tests vision-guided form completion with coordinate-based tool use and iterative screenshot correction.",
+      "version": "1.0.0",
+      "source": {
+        "type": "web",
+        "entry": "https://packs.benchlocal.com/formsight/1.0.0/",
+        "manifest": "https://packs.benchlocal.com/formsight/1.0.0/benchlocal.pack.json",
+        "buildId": "formsight-1.0.0-20260601"
+      },
+      "homepage": "https://packs.benchlocal.com/formsight/1.0.0/",
+      "license": "MIT",
+      "scenarioCount": 1,
+      "capabilities": {
+        "tools": true,
+        "multiTurn": true,
+        "verification": false
+      }
+    },
+    {
       "id": "cli-40",
       "name": "CLI-40",
       "author": "stevibe",
