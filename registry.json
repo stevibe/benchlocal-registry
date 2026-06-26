@@ -183,6 +183,27 @@
       }
     },
     {
+      "id": "pixelate",
+      "name": "Pixelate",
+      "author": "BenchLocal",
+      "description": "A vision benchmark where a model redraws a reference image as pixel art on a configurable grid, one cell at a time. Measuring perception, downsampling, and how well the subject's identity survives.",
+      "version": "1.0.0",
+      "source": {
+        "type": "web",
+        "entry": "https://packs.benchlocal.com/pixelate/1.0.0/",
+        "manifest": "https://packs.benchlocal.com/pixelate/1.0.0/benchlocal.pack.json",
+        "buildId": "pixelate-1.0.0-20260626"
+      },
+      "homepage": "https://packs.benchlocal.com/pixelate/1.0.0/",
+      "license": "MIT",
+      "scenarioCount": 1,
+      "capabilities": {
+        "tools": true,
+        "multiTurn": true,
+        "verification": false
+      }
+    },
+    {
       "id": "cli-40",
       "name": "CLI-40",
       "author": "stevibe",

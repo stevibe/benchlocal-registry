@@ -19,7 +19,8 @@ const LOCAL_PACK_PATHS = {
   "structoutput-15": path.resolve(__dirname, "../StructOutput-15"),
   "hermesagent-20": path.resolve(__dirname, "../HermesAgent-20"),
   "cli-40": path.resolve(__dirname, "../CLI-40"),
-  "formsight": path.resolve(__dirname, "../formsight")
+  "formsight": path.resolve(__dirname, "../formsight"),
+  "pixelate": path.resolve(__dirname, "../pixelate")
 };
 
 function sendJson(response, statusCode, payload) {
